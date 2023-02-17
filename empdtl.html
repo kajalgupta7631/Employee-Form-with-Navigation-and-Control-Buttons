@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Employee Form</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Template Main CSS File -->
+        <link href="assets/css/style.css" rel="stylesheet">
+        <script>
+            window.onload = function () {
+                displayNone();
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <main id="main" class="main">
+
+            <div class="pagetitle">
+
+                <h1>Employee Form using JPDB API</h1>
+
+            </div><!-- End Page Title -->
+            <section class="section">
+                <div class="row">
+
+
+                    <div class="col-lg-9">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Vertical Form -->
+                                <form class="row g-3">
+                                    <div class="col-12">
+                                        <label for="empid" class="form-label">Employee Id :</label>
+                                        <input type="text" class="form-control" id="empid" onchange="getEmpId()">
+                                        <div id="msg" class="row g-1 col-12 text text-success"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="empname" class="form-label">Employee Name :</label>
+                                        <input type="text" class="form-control" id="empname">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="empsal" class="form-label">Basic Salary :</label>
+                                        <input type="number" class="form-control" id="empsal">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="emphra" class="form-label">HRA : </label>
+                                        <input type="number" class="form-control" id="emphra">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="empda" class="form-label">DA : </label>
+                                        <input type="number" class="form-control" id="empda">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="empdeduction" class="form-label">Deduction : </label>
+                                        <input type="number" class="form-control" id="empdeduction">
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary" id="new" onclick="newForm()">New</button>
+                                        <button type="button" class="btn btn-primary" id="save" onclick="saveData()">Save</button>
+                                        <button type="button" class="btn btn-primary" id="edit" onclick="editData()">Edit</button>
+                                        <button type="button" class="btn btn-primary" id="change" onclick="changeData()">Change</button>
+                                        <button type="button" class="btn btn-primary" id="reset" onclick="resetForm()">Reset</button>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-primary" id="first" onclick="getFirst()">First</button>
+                                        <button type="button" class="btn btn-primary" id="prev" onclick="getPrev()">Previous</button>
+                                        <button type="button" class="btn btn-primary" id="next" onclick="getNext()">Next</button>
+                                        <button type="button" class="btn btn-primary" id="last" onclick="getLast()">Last</button>
+                                    </div>
+
+                                </form><!-- Vertical Form -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main><!-- End #main -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+        <script type="text/javascript" src="empdtl.js"></script>
+    </body>
+
+</html>
